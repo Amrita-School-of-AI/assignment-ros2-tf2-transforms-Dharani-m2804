@@ -12,18 +12,16 @@ find_package(tf2_ros REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
 # Create executable
-add_executable(tf2_broadcaster src/tf2_broadcaster.cpp)
+add_executable(tf_broadcaster src/tf_broadcaster.cpp)
 
-ament_target_dependencies(tf2_broadcaster
+ament_target_dependencies(tf_broadcaster
   rclcpp
   tf2_ros
   geometry_msgs
 )
 
-# Install executable
 install(TARGETS
-  tf2_broadcaster
+  tf_broadcaster
   DESTINATION lib/${PROJECT_NAME}
 )
-
 ament_package()
